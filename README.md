@@ -35,4 +35,4 @@ O painel foi desenhado com foco em usabilidade (UX) e leitura executiva (gestão
 4.  **Tabela de Detalhes:** A visão granular (linha a linha) para o PM saber exatamente qual requisito cobrar e a quem.
 
 ---
-*Desenvolvido por Emerson Gomes* | [O meu LinkedIn](linkedin.com/in/emerson-vieira-gomes-51a10a200)
+*Desenvolvido por Emerson Gomes* | [LinkedIn](linkedin.com/in/emerson-vieira-gomes-51a10a200)
