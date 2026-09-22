@@ -1,0 +1,18 @@
+-- Script 04: Criação da View Analítica para o Power BI
+
+CREATE VIEW vw_Requisitos_Dashboard AS
+SELECT 
+    P.Nome_Projeto,
+    R.Titulo AS Titulo_Requisito,
+    R.Prioridade,
+    R.Status,
+    R.Data_Entrada_Analise,
+    DATEDIFF(DAY, R.Data_Entrada_Analise, GETDATE()) AS Dias_Em_Analise,
+    CASE 
+        WHEN R.Status = 'Em Análise' AND DATEDIFF(DAY, R.Data_Entrada_Analise, GETDATE()) > 15 THEN 'Atrasado'
+        WHEN R.Status = 'Em Análise' AND DATEDIFF(DAY, R.Data_Entrada_Analise, GETDATE()) <= 15 THEN 'No Prazo'
+        ELSE 'Não se Aplica'
+    END AS Situacao_Atraso
+FROM REQUISITO AS R
+INNER JOIN PROJETO AS P 
+    ON R.ID_Projeto = P.ID_Projeto;

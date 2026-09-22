@@ -1,0 +1,19 @@
+-- Script 05: Consultas Analíticas e KPIs
+
+-- KPI 1: Total de Requisitos por Prioridade (Validação US002)
+SELECT 
+    Prioridade, 
+    COUNT(ID_Requisito) AS Total_Requisitos
+FROM REQUISITO
+GROUP BY Prioridade;
+
+-- KPI 2: Tempo Médio de Aprovação em Dias
+SELECT 
+    Prioridade,
+    AVG(DATEDIFF(DAY, Data_Criacao, Data_Aprovacao)) AS Tempo_Medio_Aprovacao_Dias
+FROM REQUISITO
+WHERE Data_Aprovacao IS NOT NULL
+GROUP BY Prioridade;
+
+-- Consulta final testando a View
+SELECT * FROM vw_Requisitos_Dashboard;

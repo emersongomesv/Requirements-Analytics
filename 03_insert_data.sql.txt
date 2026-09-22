@@ -1,0 +1,39 @@
+-- Script 03: Inserção de Dados Simulados (DML)
+
+INSERT INTO PROJETO (Nome_Projeto, Responsavel, Data_Inicio, Data_Fim) VALUES 
+('Portal do Cliente', 'Ana Souza', '2026-01-01', NULL),
+('Aplicativo Mobile', 'Carlos Lima', '2026-02-15', NULL),
+('Sistema de Gestão', 'Mariana Alves', '2026-03-10', NULL);
+
+INSERT INTO STAKEHOLDER (Nome, Area, Cargo) VALUES 
+('Ana Souza', 'TI', 'Gerente de Projetos'),
+('Carlos Lima', 'Produto', 'Product Owner'),
+('Mariana Alves', 'Negócio', 'Gestora'),
+('João Santos', 'TI', 'Analista');
+
+INSERT INTO USUARIO (Nome, Perfil, Area) VALUES 
+('Ana Souza', 'Gerente de Projetos', 'TI'),
+('Carlos Lima', 'Product Owner', 'Produto'),
+('João Santos', 'Analista de Requisitos', 'TI');
+
+INSERT INTO REQUISITO (ID_Projeto, Titulo, Descricao, Prioridade, Status, Data_Criacao, Data_Entrada_Analise, Data_Aprovacao) VALUES
+(1, 'Cadastro de clientes', 'Permitir cadastro completo.', 'Crítica', 'Concluído', '2026-08-01', '2026-08-05', '2026-08-15'),
+(1, 'Consulta de pedidos', 'Consulta de histórico.', 'Alta', 'Em Teste', '2026-08-05', '2026-08-10', NULL),
+(1, 'Notificação por e-mail', 'Enviar e-mail após compra.', 'Média', 'Em Análise', '2026-09-01', '2026-09-12', NULL),
+(2, 'Login do usuário', 'Autenticação segura.', 'Crítica', 'Aprovado', '2026-08-10', '2026-08-12', '2026-08-20'),
+(2, 'Recuperação de senha', 'Fluxo esqueci a senha.', 'Alta', 'Aguardando Aprovação', '2026-08-15', '2026-08-25', NULL),
+(2, 'Pagamento via PIX', 'Integração API Bacen.', 'Crítica', 'Em Análise', '2026-08-20', '2026-09-02', NULL),
+(3, 'Cadastro de funcionários', 'Módulo RH.', 'Alta', 'Em Desenvolvimento', '2026-07-15', '2026-07-20', '2026-08-01'),
+(3, 'Relatório gerencial', 'Dashboard financeiro.', 'Média', 'Em Análise', '2026-08-15', '2026-08-23', NULL),
+(3, 'Exportação para Excel', 'Download em xlsx.', 'Baixa', 'Backlog', '2026-09-20', NULL, NULL);
+
+INSERT INTO APROVACAO (ID_Requisito, ID_Stakeholder, Status_Aprovacao, Data_Aprovacao) VALUES
+(1, 3, 'Aprovado', '2026-08-15'),
+(2, 2, 'Pendente', NULL),
+(4, 1, 'Aprovado', '2026-08-20'),
+(5, 3, 'Pendente', NULL);
+
+INSERT INTO HISTORICO_REQUISITO (ID_Requisito, Campo_Alterado, Valor_Anterior, Novo_Valor, ID_Usuario, Data_Alteracao) VALUES
+(3, 'Status', 'Backlog', 'Em Análise', 3, '2026-09-12T10:30:00'),
+(6, 'Prioridade', 'Alta', 'Crítica', 2, '2026-08-25T14:15:00'),
+(8, 'Status', 'Backlog', 'Em Análise', 1, '2026-08-23T09:00:00');

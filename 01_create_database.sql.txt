@@ -1,0 +1,6 @@
+-- Script 01: Criação do Banco de Dados e Definição de Contexto
+CREATE DATABASE RequirementsAnalytics;
+GO
+
+USE RequirementsAnalytics;
+GO
