@@ -26,7 +26,7 @@ Aqui encontra todo o código SQL utilizado para construir a base e as regras de 
 
 ## 📈 Resultados (O Dashboard)
 
-![Dashboard Power BI](painel)
+![Dashboard Power BI](painel.png).
 
 O painel foi desenhado com foco em usabilidade (UX) e leitura executiva (gestão por exceção):
 1.  **KPIs Diretos:** O gestor sabe numa fração de segundo o total de pendências e o que está atrasado.
