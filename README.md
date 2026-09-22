@@ -24,9 +24,9 @@ Aqui encontra todo o código SQL utilizado para construir a base e as regras de 
 *   `04_views.sql` - **O coração da regra de negócio.** View que calcula dinamicamente o status do SLA.
 *   `05_queries.sql` - Consultas de validação analítica.
 
-## 📈 Resultados (O Dashboard)
+## 📈 Resultados
 
-![Dashboard Power BI](painel.png).
+![Dashboard Power BI](painel.png)
 
 O painel foi desenhado com foco em usabilidade (UX) e leitura executiva (gestão por exceção):
 1.  **KPIs Diretos:** O gestor sabe numa fração de segundo o total de pendências e o que está atrasado.
@@ -35,4 +35,4 @@ O painel foi desenhado com foco em usabilidade (UX) e leitura executiva (gestão
 4.  **Tabela de Detalhes:** A visão granular (linha a linha) para o PM saber exatamente qual requisito cobrar e a quem.
 
 ---
-*Desenvolvido por Emerson Gomes* | [O meu LinkedIn](Insira-o-link-do-seu-linkedin-aqui)
+*Desenvolvido por Emerson Gomes* | [O meu LinkedIn](linkedin.com/in/emerson-vieira-gomes-51a10a200)
